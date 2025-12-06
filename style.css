@@ -1,0 +1,139 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+.main-header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+}
+
+nav a:hover, nav a.active {
+    color: #D3003B; /* L'Oréal-inspired accent color */
+    border-bottom: 2px solid #D3003B;
+}
+
+/* Content Screens (Used for all 5 pages) */
+.content {
+    min-height: 80vh; /* Ensures content fills the viewport */
+    padding: 0;
+}
+
+.screen {
+    padding: 80px 50px;
+    min-height: calc(100vh - 80px); /* Full viewport height minus header height */
+    display: none; /* Hide all screens by default */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.active-screen {
+    display: flex; /* Only show the active screen */
+}
+
+/* Home Screen Specific Styles (Detailed Design) */
+#home {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.hero-image {
+    flex: 1;
+    /* This is a placeholder for a real image, which is why your page looked plain */
+    background: url('https://placehold.co/700x1000/F0E6E6/555555?text=L\'OREAL+HERO+IMAGE') center center / cover no-repeat;
+    height: 100vh;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: #D3003B;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #A0002A;
+}
+
+/* Dummy Screen Styles */
+#skincare, #makeup, #haircare, #about {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.screen h2 {
+    font-size: 2.5em;
+    color: #D3003B;
+    margin-bottom: 15px;
+}
+
+.screen p {
+    font-size: 1.1em;
+    color: #666;
+}
